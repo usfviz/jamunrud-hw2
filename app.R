@@ -171,7 +171,7 @@ server <- function(input, output) {
     layer_text(x = 8, y = ~Fertility.Rate - .1, text := ~Y.Label, fontWeight := 'bold', fontSize := 12,
                fill := 'black') %>% 
     layer_points(x = ~Hover.X.Fertility, y = ~Hover.Y.Fertility, shape := 'diamond', fill = ~Region, opacity = ~Hover.X.Fertility/6) %>% 
-    hide_legend(c("size", "stroke", "fill")) %>% 
+    ggvis::hide_legend(c("size", "stroke", "fill")) %>% 
     bind_shiny('plot1')
 }
 
